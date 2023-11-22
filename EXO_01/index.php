@@ -55,10 +55,21 @@ class Personnage
     {
         echo "C'est moi " . $this->getName();
     }
+
+    public function __toString()
+    {
+        $txt = "";
+        $txt .= "Bonjour, c'est moi " . $this->name . "</br>";
+        $txt .= "Mon age est  " . $this->age . "</br>";
+        $txt .= ($this->sexe == "M") ? "Je suis un homme" : "Je suis une femme";
+        return $txt;
+    }
 }
 
 $perso1 = new Personnage("Tya", 22, false);
-echo "Nom : " . $perso1->getName() . "</BR>";
-$perso1->setName("Titi");
-echo "Nouveau nom : " . $perso1->getName() . "</BR>";
-$perso1->ditBonjour();
+echo $perso1;
+
+// echo "Nom : " . $perso1->getName() . "</BR>";
+// $perso1->setName("Titi");
+// echo "Nouveau nom : " . $perso1->getName() . "</BR>";
+// $perso1->ditBonjour();

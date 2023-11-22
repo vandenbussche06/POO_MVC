@@ -27,6 +27,8 @@ class Personnage
     {
         echo "Dégats infligés : " . $this->calculDegat() . " dégats. </br>";
     }
+
+
 }
 
 $perso_01 = new Personnage("Laurent", "Gerrier", 3, 100, true);
